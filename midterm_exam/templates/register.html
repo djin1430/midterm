@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="{{url_for ('static', filename = 'login.css')}}">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+        <div class="form-container">
+            </div>
+            <div class="form-inner">
+            <form action="/register" method="POST" class="register">
+                <div class="field">
+                    <input type="text" name="firstname" placeholder="Firstname" required>
+                </div>
+                <div class="field">
+                    <input type="password" name="lastname" placeholder="Lastname" required>
+                </div>
+                <div class="field">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="field">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+            </div>
+            <script>
+                const signupBtn = document.querySelector("label.signup");
+                const signupLink = document.querySelector("form .signup-link a");
+                signupBtn.onclick = (()=>{
+                    loginForm.style.marginLeft = "-50%";
+                    loginText.style.marginLeft = "-50%";
+                });
+                signupLink.onclick = (()=>{
+                    signupBtn.click();
+                    return false;
+                });
+            </script>
+    </body>
+</html>

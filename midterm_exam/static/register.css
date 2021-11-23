@@ -1,0 +1,13 @@
+html, body{
+    display:grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background-color: aquamarine;
+}
+
+.wrapper .form-container{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
